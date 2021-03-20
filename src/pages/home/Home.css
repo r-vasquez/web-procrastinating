@@ -1,0 +1,31 @@
+h1.randomPhrase {
+  font-size: 3.5em;
+  color: #2a363b;
+  margin: 0.15em 0;
+  cursor: pointer;
+}
+
+main .main-title {
+  font-size: 1.17em;
+  color: #0099ff;
+  font-weight: normal;
+}
+
+main.main-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  min-height: 100vh;
+}
+
+@media (max-width: 480px) {
+  h1.randomPhrase {
+    font-size: 2em;
+  }
+
+  main .main-title {
+    font-size: 1em;
+  }
+}

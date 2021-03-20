@@ -2,12 +2,11 @@ import './Home.css';
 import PhraseDisplay from '../../components/PhraseDisplay';
 
 function Home() {
-
   return (
-    <div>
-      <h1>Hello </h1>
+    <main className="main-container">
+      <h3 className="main-title">Am I Procrastinating?</h3>
       <PhraseDisplay />
-    </div>
+    </main>
   );
 }
 

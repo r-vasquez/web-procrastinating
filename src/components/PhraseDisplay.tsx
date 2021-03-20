@@ -1,9 +1,20 @@
-import {phrases} from '../utils/phrases'
+import { useState } from 'react';
+import { phrases } from '../utils/phrases';
 
-function PhraseDisplay () {
-    const randomPhrase = phrases[Math.floor(Math.random() * phrases.length)];
+function PhraseDisplay() {
+  const [randIndex, setRandIndex] = useState(Math.floor(Math.random() * phrases.length));
+  const [randPhrase, setRandPhrase] = useState(phrases[randIndex]);
 
-    return <h3>{randomPhrase}</h3>
+  const onClickHandler = () => {
+    const randNum = Math.floor(Math.random() * phrases.length);
+    setRandIndex(randNum);
+    setRandPhrase(phrases[randNum]);
+  };
+  return (
+    <h1 className="randomPhrase" onClick={() => onClickHandler()}>
+      {randPhrase}
+    </h1>
+  );
 }
 
-export default PhraseDisplay
+export default PhraseDisplay;
