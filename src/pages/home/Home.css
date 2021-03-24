@@ -1,13 +1,13 @@
 h1.randomPhrase {
-  font-size: 3.5em;
-  color: #2a363b;
+  font-size: 3.8em;
+  color: var(--text-color);
   margin: 0.15em 0;
   cursor: pointer;
 }
 
 main .main-title {
-  font-size: 1.17em;
-  color: #0099ff;
+  font-size: 1.6em;
+  color: var(--second-text-color);
   font-weight: normal;
 }
 
@@ -18,6 +18,22 @@ main.main-container {
   align-items: center;
   text-align: center;
   min-height: 100vh;
+}
+
+.toggle {
+  position: absolute;
+  cursor: pointer;
+  top: 20px;
+  right: 25px;
+  font-size: 2em;
+}
+
+.toggle:before {
+  content: '🌞';
+}
+
+.toggle.dark:before {
+  content: '🌚';
 }
 
 @media (max-width: 480px) {

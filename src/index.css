@@ -3,10 +3,39 @@ body {
   font-family: 'Poppins', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  background-color: #F6F5F5;
+  background-color: var(--bkg-color);
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+/* Default colors */
+body {
+  --text-color: #2a363b;
+  --second-text-color: #0099ff;
+  --bkg-color: #F6F5F5;
+}
+/* Dark theme colors */
+body.dark {
+  --text-color: #F6F5F5;
+  --second-text-color: #0099ff;
+  --bkg-color: #2a363b;
+}
+
+/* Styles for users who prefer dark mode at the OS level */
+@media (prefers-color-scheme: dark) {
+  /* defaults to dark theme */
+  body { 
+    --text-color: #F6F5F5;
+    --second-text-color: #0099ff;
+    --bkg-color: #2a363b;
+  }
+  /* Override dark mode with light mode styles if the user decides to swap */
+  body.light {
+    --text-color: #2a363b;
+    --second-text-color: #0099ff;
+    --bkg-color: #F6F5F5;
+  }
 }
