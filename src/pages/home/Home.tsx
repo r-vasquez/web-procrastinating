@@ -5,7 +5,7 @@ import { addThemeClassToBody, getCurrentTheme } from '../../utils/helpers';
 import { ThemeTypes } from '../../utils/types';
 import './Home.css';
 
-function Home() {
+function Home(): JSX.Element {
   const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
