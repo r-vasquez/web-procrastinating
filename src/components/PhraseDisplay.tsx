@@ -1,7 +1,7 @@
 import { useState } from 'react';
 import { phrases } from '../utils/phrases';
 
-function PhraseDisplay() {
+function PhraseDisplay(): JSX.Element {
   const [randIndex, setRandIndex] = useState(Math.floor(Math.random() * phrases.length));
   const [randPhrase, setRandPhrase] = useState(phrases[randIndex]);
 

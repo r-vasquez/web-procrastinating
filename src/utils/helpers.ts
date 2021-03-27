@@ -1,6 +1,6 @@
 import { ThemeTypes } from './types';
 
-export const addThemeClassToBody = (themeClass: ThemeTypes) => {
+export const addThemeClassToBody = (themeClass: ThemeTypes): void => {
   const bodyClassList = document.body.classList;
   if (bodyClassList.contains(themeClass)) return;
 

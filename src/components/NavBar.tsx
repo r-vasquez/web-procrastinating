@@ -3,7 +3,7 @@ type NavBarPropType = {
   toggleTheme: () => void,
 }
 
-function NavBar(props: NavBarPropType) {
+function NavBar(props: NavBarPropType): JSX.Element {
   const {isDark, toggleTheme} = props;
 
   return (
